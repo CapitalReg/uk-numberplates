@@ -1,12 +1,7 @@
 {
-  "name"         : "uk-numberplate-validation",
+  "name"         : "uk-numberplates",
   "version"      : "0.0.1",
   "description"  : "Node JS package to validate UK number plates.",
-  "main"         : "uk-numberplate-validation.js",
-  "author"       : "Aaron Kenney",
-  "dependencies" : {
-    "express"    	: "latest",
-    "request"    	: "latest",
-	"mysql"			: "latest"
-  }
+  "main"         : "uk-numberplates.js",
+  "author"       : "Aaron Kenney"
 }
