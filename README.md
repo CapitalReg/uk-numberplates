@@ -2,6 +2,8 @@
 
 UK number plates are available in a set range of formats. This short Node JS validation script will take a supplied string and return to you a JSON object containing a correct/road legal formatted version of the registration plus some other useful information where possible.
 
+There's a full guide at Capital Reg on the various [UK number plate formats](http://www.capitalreg.co.uk/number-plate-formats-explained.html).
+
 ## Installation
 
 ```                                                       
@@ -39,11 +41,11 @@ The JSON data object returned looks something like this :
   month_of_issue_expiry: '08' }
 ```
 
- * The plate value is the correctly formatted registration - in this case the string fed in could be mapped to A123 STE.
- * irish is a true or false value that identifies if the registration is Irish in origin.
- * prefix, suffix and number represent the component parts of this registration. A being the prefix letter, STE being the suffix, 123 being the numbers. In the case of suffix format reg - such as STE 123A - these values would be the same, but of course 'prefix' effectively means suffix, whilst 'suffix' effectively means index, as the registration is 'flipped'. With a dateless registration that carries no prefix, prefix would be false and suffix would also effectively mean index.
- * year_of_issue tells you what year this registration would first have been available - for as yet unreleased plates the future release date will be calculated (e.g AB98 STE = 2048).
- * month_of_issue tells you the month of the year this registration would have first been available.
- * year_of_issue_expiry and month_of_issue_expiry tell you when the following sequence of number plates was released that suprceeded reg of this type (e.g A reg came out in 1983, B reg followed in 1984).
+ * The **plate** value is the correctly formatted registration - in this case the string fed in could be mapped to A123 STE.
+ * **irish** is a true or false value that identifies if the registration is Irish in origin.
+ * **prefix**, **suffix** and **number** represent the component parts of this registration. In this example 'A' is the prefix letter, 'STE' the suffix, and '123' being the numbers. In the case of suffix format reg - such as 'STE 123A' - these values would be the same, but of course **prefix** effectively means suffix, whilst **suffix** effectively means index, as the registration is 'flipped'. With a dateless registration that carries no prefix, **prefix** would be false and **suffix** would also effectively mean index.
+ * **year_of_issue** tells you what year this registration would first have been available - for as yet unreleased plates the future release date will be calculated (e.g 'AB98 STE' = 2048).
+ * **month_of_issue** tells you the month of the year this registration would have first been available.
+ * **year_of_issue_expiry** and **month_of_issue_expiry** tell you when the following sequence of number plates was released that suprceeded reg of this type (e.g 'A' reg came out in 1983, 'B' reg followed in 1984).
 
 The year/month of issue dates are **NOT** always available. Dateless number plates have no identifiers to give their age. In this case a value of 'DAT' signifying 'dateless' will be returned.
