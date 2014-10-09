@@ -1,7 +1,29 @@
 {
-  "name"         : "uk-numberplates",
-  "version"      : "0.0.1",
-  "description"  : "Node JS package to validate UK number plates.",
-  "main"         : "uk-numberplates.js",
-  "author"       : "Aaron Kenney" 
+  "name": "uk-numberplates",
+  "version": "0.0.1",
+  "description": "Node JS package to validate UK number plates.",
+  "main": "uk-numberplates.js",
+  "author": "Aaron Kenney",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CapitalReg/uk-numberplates.git"
+  },
+  "keywords": [
+    "registration",
+    "marks",
+    "number",
+    "plate",
+    "vehicle",
+    "reg",
+    "validation",
+    "numberplate"
+  ],
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/CapitalReg/uk-numberplates/issues"
+  },
+  "homepage": "http://www.capitalreg.co.uk"
 }
