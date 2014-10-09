@@ -3,5 +3,5 @@
   "version"      : "0.0.1",
   "description"  : "Node JS package to validate UK number plates.",
   "main"         : "uk-numberplates.js",
-  "author"       : "Aaron Kenney"
+  "author"       : "Aaron Kenney" 
 }
