@@ -12,7 +12,37 @@ There's a full guide at Capital Reg on the various [UK number plate formats](htt
 
 ## Usage
 
-Very simple - there's a test.js file included with a practical example, but the short of it is that you include the uk-numberplates.js module, then feed it a string you'd like to be parsed/validated, and a callback function. The callback function receives two values, an error flag (false if all is OK and the string was parsed as a valid registration mark) and a JSON data object containing the correctly formatted number plate along with any additional info.
+Very simple - the short of it is that you include the uk-numberplates module, then you're able to feed the validate function a string you'd like to be parsed/validated, and provide a callback function. The callback function receives two values, an error flag (false if all is OK and the string was parsed as a valid registration mark) and a JSON data object containing the correctly formatted number plate along with any additional info.
+
+Here's a quick example that runs through an array and validates the registrations it contains.
+
+``` 
+// Include the module...
+validation = require('uk-numberplates');
+
+// Build an array of scrambled registrations to work with...
+var registrations = new Array();
+registrations.push('a123sTe');
+registrations.push('a1');
+registrations.push('BAZ76');
+registrations.push('rgbHEX');
+registrations.push('999tst');
+registrations.push('ab98ste');
+
+// Loop each registration and run it through the validator...
+for(var i = 0; i<registrations.length; i++) {
+	var reg = registrations[i];
+	validation.validate(reg, function(err,data) {
+
+		console.log('Registration checked = ' + reg);
+		console.log('Response: ');
+		console.log('Error: ' + err);
+		console.log(data);
+		console.log('-----------------------------');
+
+	});
+}
+```
 
 ## Response
 
